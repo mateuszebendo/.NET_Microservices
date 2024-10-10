@@ -1,0 +1,92 @@
+# ============================
+# Arquivos e pastas gerados pelo .NET
+# ============================
+
+# Pastas de build
+bin/
+obj/
+out/
+
+# Pacotes NuGet
+*.nupkg
+.nuget/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Arquivos de cache
+*.cache
+*.dll
+*.exe
+*.pdb
+
+# Configurações do usuário
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# ============================
+# Docker
+# ============================
+
+# Evita que overrides do Docker Compose sejam versionados
+docker-compose.override.yml
+
+# Pastas específicas do Docker
+.docker/
+docker/
+
+# Arquivos temporários do Docker
+*.dockerfile
+
+# ============================
+# Kubernetes
+# ============================
+
+# Arquivos de configuração sensíveis
+kubeconfig
+*.kube/
+
+# Arquivos de segredos
+secrets.yaml
+*.secret.yaml
+
+# Outros arquivos temporários do Kubernetes
+*.k8s.yaml
+*.k8s.yml
+
+# ============================
+# Sistema Operacional
+# ============================
+
+# Arquivos do macOS
+.DS_Store
+
+# Arquivos do Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============================
+# Outros
+# ============================
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Backup de arquivos
+*~
+*.bak
+*.backup
