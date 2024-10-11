@@ -10,5 +10,5 @@ spec:
     - name: http
       protocol: TCP
       port: 80       # Porta exposta pelo Service
-      targetPort: 5000  # Porta no container onde a aplicação está escutando 
+      targetPort: 80  # Porta no container onde a aplicação está escutando 
       

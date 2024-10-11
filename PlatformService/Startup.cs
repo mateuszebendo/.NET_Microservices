@@ -26,11 +26,13 @@ namespace PlatformService
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddDbContext<AppDbContext>(opt => 
+                //opt.UseInMemoryDatabase("InMem"));
+                
             services.AddDbContext<AppDbContext>(opt => 
-                opt.UseInMemoryDatabase("InMem"));
+                opt.UseSqlServer(Configuration.GetConnectionString("PlatformsConn")));
             
             services.AddScoped<IPlatformRepo, PlatformRepo>();
             
@@ -46,7 +48,6 @@ namespace PlatformService
             Console.WriteLine($"--> CommandService Endpoint {Configuration["CommandService"]}");
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

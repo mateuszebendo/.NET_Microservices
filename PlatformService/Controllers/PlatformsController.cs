@@ -29,7 +29,7 @@ namespace PlatformService.Controllers
         }
 
         [HttpGet]
-        [Route("/get-all-platforms")]
+        [Route("get-all-platforms")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetAllPlatforms()
         {
@@ -56,7 +56,7 @@ namespace PlatformService.Controllers
 
 
         [HttpPost]
-        [Route("/add-platform")]
+        [Route("add-platform")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult<PlatformReadDto>> CreatePlatform([FromBody] PlatformCreateDto platformCreateDto)
         {

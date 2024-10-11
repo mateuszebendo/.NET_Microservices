@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using PlatformService.Models;
 
@@ -18,6 +19,16 @@ namespace PlatformService.Data
 
         private static void SeedData(AppDbContext context)
         {
+            Console.WriteLine("--> Attempting to apply migrations...");
+            try
+            {
+                context.Database.Migrate();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("--> Could not run migrations: " + ex.Message);
+            }
+            
             if (!context.Platforms.Any())
             {
                 Console.WriteLine("--> Seeding data...");

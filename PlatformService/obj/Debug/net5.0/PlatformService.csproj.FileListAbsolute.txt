@@ -150,3 +150,4 @@ C:\Users\MateusViniciusZebend\Documents\E3\PlatformService\obj\Debug\net5.0\refi
 C:\Users\MateusViniciusZebend\Documents\E3\PlatformService\obj\Debug\net5.0\PlatformService.pdb
 C:\Users\MateusViniciusZebend\Documents\E3\PlatformService\obj\Debug\net5.0\PlatformService.genruntimeconfig.cache
 C:\Users\MateusViniciusZebend\Documents\E3\PlatformService\obj\Debug\net5.0\ref\PlatformService.dll
+C:\Users\MateusViniciusZebend\Documents\E3\PlatformService\obj\Debug\net5.0\PlatformService.sourcelink.json

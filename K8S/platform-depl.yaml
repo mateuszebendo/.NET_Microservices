@@ -14,9 +14,10 @@ spec:
     spec: 
       containers: 
         - name: platformservice
-          image: mateuszebendo/platformservice:latest
+          image: mateuszebendo/platformservice:v1.2
+          imagePullPolicy: Always
           ports:
-            - containerPort: 5000
+            - containerPort: 80
           env:
             - name: ASPNETCORE_ENVIRONMENT
               value: Development
