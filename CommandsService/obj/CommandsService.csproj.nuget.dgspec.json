@@ -60,9 +60,17 @@
               "target": "Package",
               "version": "[5.0.8, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.8, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.2.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -10,6 +10,7 @@ namespace PlatformService.Profiles
         {
             CreateMap<Platform, PlatformReadDto>().ReverseMap();
             CreateMap<Platform, PlatformCreateDto>().ReverseMap();
+            CreateMap<PlatformReadDto, PlatformPublishedDto>();
         }
     }
 }
