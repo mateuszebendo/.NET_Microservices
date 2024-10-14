@@ -23,6 +23,7 @@ namespace PlatformService.Data
             try
             {
                 context.Database.Migrate();
+                Console.WriteLine("--> Migrations applied.");
             }
             catch (Exception ex)
             {

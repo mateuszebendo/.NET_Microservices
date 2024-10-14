@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
         - name: platformservice
-          image: mateuszebendo/platformservice:v1.2
+          image: mateuszebendo/platformservice:v1.31
           imagePullPolicy: Always
           ports:
             - containerPort: 80
