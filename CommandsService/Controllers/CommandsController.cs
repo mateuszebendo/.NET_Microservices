@@ -36,7 +36,7 @@ namespace CommandsService.Controllers
             return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(_repository.GetCommandsForPlatform(platformId)));
         }
 
-        [HttpGet("{commandId}")]
+        [HttpGet("{commandId}", Name = "GetCommandForPlatform")]
         public ActionResult<CommandReadDto> GetCommandByPlatformId([FromRoute] int platformId, [FromRoute] int commandId)
         {
             Console.WriteLine($"--> Getting command by platform ID = {platformId}...");
@@ -60,15 +60,16 @@ namespace CommandsService.Controllers
             }
 
             var command = _mapper.Map<Command>(commandCreateDto);
-            
+            command.PlatformId = platformId; 
+
             _repository.CreateCommand(platformId, command);
             _repository.SaveChanges();
 
-            CommandReadDto commandReadDto = _mapper.Map<CommandReadDto>(command);
-            
-            return CreatedAtRoute(nameof(CreateCommandForPlatform), 
-                                    new {platformId = platformId, commandId = commandReadDto.Id},
-                                    commandReadDto);
+            var commandReadDto = _mapper.Map<CommandReadDto>(command);
+
+            return CreatedAtRoute("GetCommandForPlatform", 
+                new { platformId = platformId, commandId = commandReadDto.Id },
+                commandReadDto);
         }
     }
 }
