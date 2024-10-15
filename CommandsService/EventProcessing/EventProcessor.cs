@@ -41,7 +41,7 @@ namespace CommandsService.EventProcessing
 
             switch (eventType.Event)
             {
-                case "Platform_Pubilshed": 
+                case "Platform_Published": 
                     Console.WriteLine("--> Platform Published Event Detected");
                     return EventType.PlatformPublished;
                 default: 
@@ -65,6 +65,7 @@ namespace CommandsService.EventProcessing
                     {
                         repo.CreatePlatform(plat);
                         repo.SaveChanges();
+                        Console.WriteLine("--> Platform added!");
                     }
                     else
                     {

@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
         - name: commandservice
-          image: mateuszebendo/commandservice:v2.123
+          image: mateuszebendo/commandservice:v2.21
           imagePullPolicy: Always
           env:
             - name: ASPNETCORE_ENVIRONMENT

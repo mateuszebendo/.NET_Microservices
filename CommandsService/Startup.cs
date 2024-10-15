@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CommandsService.AsyncDataServices;
 using CommandsService.Data;
 using CommandsService.EventProcessing;
 using Microsoft.AspNetCore.Builder;
@@ -29,6 +30,9 @@ namespace CommandsService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddHostedService<MessageBusSubscriber>();
+            
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             
             //services.AddDbContext<AppDbContext>(opt => 
